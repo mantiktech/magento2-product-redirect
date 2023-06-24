@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="mantik" translate="label" sortOrder="10000">
+            <label>Mantik</label>
+        </tab>
+        <section id="product_redirect" translate="label" type="text" sortOrder="100" showInDefault="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Product Redirect</label>
+            <tab>mantik</tab>
+            <resource>Mantik_ProductRedirect::config_mantik_product_redirect</resource>
+            <group id="disabled_product" translate="label" type="text" sortOrder="10" showInDefault="1" showInStore="1">
+                <label>Disable Product</label>
+                <field id="status" translate="label" type="select" sortOrder="10" showInDefault="1" showInStore="1">
+                    <label>Redirect enabled?</label>
+                    <source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+                </field>
+            </group>
+            <group id="not_visible_product" translate="label" type="text" sortOrder="10" showInDefault="1"
+                   showInStore="1">
+                <label>Not visible Product</label>
+                <field id="status" translate="label" type="select" sortOrder="10" showInDefault="1" showInStore="1">
+                    <label>Redirect enabled?</label>
+                    <source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+                </field>
+            </group>
+            <group id="deleted_product" translate="label" type="text" sortOrder="10" showInDefault="1"
+                   showInStore="1">
+                <label>Deleted Product</label>
+                <field id="status" translate="label" type="select" sortOrder="10" showInDefault="1" showInStore="1">
+                    <label>Redirect enabled?</label>
+                    <source_model>Magento\Config\Model\Config\Source\Enabledisable</source_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
